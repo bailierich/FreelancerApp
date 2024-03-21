@@ -1,14 +1,11 @@
 import dotenv from "dotenv";
-import { Db, MongoClient, ServerApiVersion } from "mongodb";
-
+import { MongoClient, ServerApiVersion } from "mongodb";
 dotenv.config();
-
 // MongoDB connection URI from MongoDB Atlas
-const uri: string =
+const uri =
   "mongodb+srv://browngirldev:Ck7VRGs2RC7tZDR5@user.pveqp4i.mongodb.net/?retryWrites=true&w=majority&appName=User";
 
-let db: Db;
-
+let db;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -17,16 +14,13 @@ const client = new MongoClient(uri, {
     deprecationErrors: true,
   },
 });
-
 async function connectDB() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
-
     db = client.db();
-
     console.log(
       "Pinged your deployment. You successfully connected to MongoDB!"
     );
@@ -35,12 +29,10 @@ async function connectDB() {
     await client.close();
   }
 }
-
-function getDB(): Db {
+function getDB() {
   if (!db) {
     throw new Error("Database not connected");
   }
   return db;
 }
-
 export { connectDB, getDB };

@@ -1,0 +1,53 @@
+project-name/
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── UserController.ts
+│   │   │   └── ProjectController.ts
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.ts
+│   │   │   └── Project.ts
+│   │   │
+│   │   ├── routes/
+│   │   │   ├── userRoutes.ts
+│   │   │   └── projectRoutes.ts
+│   │   │
+│   │   ├── utils/
+│   │   │   └── errorHandler.ts
+│   │   │
+│   │   ├── app.ts
+│   │   └── config.ts
+│   │
+│   ├── tests/
+│   │   ├── userController.test.ts
+│   │   └── projectController.test.ts
+│   │
+│   ├── .env
+│   ├── .gitignore
+│   ├── package.json
+│   ├── tsconfig.json
+│   └── README.md
+│
+└── frontend/
+    ├── public/
+    │   ├── index.html
+    │   └── favicon.ico
+    │
+    ├── src/
+    │   ├── components/
+    │   │   ├── Home.tsx
+    │   │   └── UserProfile.tsx
+    │   │
+    │   ├── pages/
+    │   │   ├── UsersPage.tsx
+    │   │   └── ProjectsPage.tsx
+    │   │
+    │   ├── App.tsx
+    │   └── index.tsx
+    │
+    ├── .gitignore
+    ├── package.json
+    ├── tsconfig.json
+    └── README.md

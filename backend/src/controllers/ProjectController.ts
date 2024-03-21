@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getDB } from "../db"; // Import the getDB function from db.ts
+import { getDB } from "../db.js"; // Import the getDB function from db.ts
 
 const ProjectController = {
   getAllProjects: async (req: Request, res: Response): Promise<void> => {
